@@ -6468,6 +6468,10 @@
           "named": true
         },
         {
+          "type": "shebang",
+          "named": true
+        },
+        {
           "type": "shorthand",
           "named": true
         },
@@ -7633,7 +7637,8 @@
   },
   {
     "type": "comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "context",
@@ -7718,6 +7723,10 @@
   {
     "type": "set",
     "named": false
+  },
+  {
+    "type": "shebang",
+    "named": true
   },
   {
     "type": "show",

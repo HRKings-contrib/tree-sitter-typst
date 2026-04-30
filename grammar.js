@@ -91,7 +91,13 @@ module.exports = grammar({
     [$._math_attach_sup, $._math_attach_sub],
   ],
   rules: {
-    source_file: $ => content($),
+    source_file: $ => seq(
+      $._line_start_check,
+      optional($.shebang),
+      repeat(choice($._content_lb, $._line_content)),
+    ),
+
+    shebang: $ => token(prec(20, seq('#!', /[^\r\n]*/))),
 
     _line_content: $ => prec.right(choice(
       seq(choice($.section, $.item, $.term), repeat($._markup)),

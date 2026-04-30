@@ -11,6 +11,18 @@
           "name": "_line_start_check"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "shebang"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "REPEAT",
           "content": {
             "type": "CHOICE",
@@ -27,6 +39,26 @@
           }
         }
       ]
+    },
+    "shebang": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 20,
+        "content": {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "#!"
+            },
+            {
+              "type": "PATTERN",
+              "value": "[^\\r\\n]*"
+            }
+          ]
+        }
+      }
     },
     "_line_content": {
       "type": "PREC_RIGHT",
@@ -3678,5 +3710,6 @@
   "inline": [
     "_pattern"
   ],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }

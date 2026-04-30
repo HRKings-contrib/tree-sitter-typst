@@ -19,10 +19,12 @@ Don't hesitate to contact me (mailto:eddie.gerbais-nief@proton.me) or to open an
 
 The documentation of the current implementation (not the rewrite) is available in [DOC](DOC.md). But I suggest to ignore the current implementation as it is a spaghetti mess. However, the [DOC](DOC.md) brings up interesting chalenges.
 
+Targets Typst v0.14.
+
 ## TODO
 
-- [ ] Update 0.13
-  - [ ] Identify changes
+- [x] Update 0.13
+- [x] Update 0.14 (shebang support)
 - [ ] More tests, objectif 1000, current 433
   - [x] generate tests from official Typst parser. https://github.com/uben0/tree-sitter-typst-utils/tree/main/test-gen
 - [X] Editor support
